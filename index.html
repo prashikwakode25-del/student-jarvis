@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111d">
+  <meta name="description" content="Student JARVIS — a futuristic offline-first student dashboard.">
+  <title>Student JARVIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="brand-core">◉</span><div><strong>J.A.R.V.I.S.</strong><small>STUDENT OS</small></div></div>
+    <nav>
+      <button class="nav-btn active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+      <button class="nav-btn" data-view="tasks">✓ <span>Tasks</span><b id="taskBadge">0</b></button>
+      <button class="nav-btn" data-view="subjects">▣ <span>Subjects</span></button>
+      <button class="nav-btn" data-view="timetable">◫ <span>Timetable</span></button>
+      <button class="nav-btn" data-view="expenses">₹ <span>Expenses</span></button>
+      <button class="nav-btn" data-view="notes">✎ <span>Notes</span></button>
+      <button class="nav-btn" data-view="study">◷ <span>Study Timer</span></button>
+      <button class="nav-btn" data-view="settings">⚙ <span>Settings</span></button>
+    </nav>
+    <div class="sidebar-foot">LOCAL MODE<br><span>No camera • No microphone</span></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu" id="menuBtn">☰</button>
+      <div><div class="eyebrow">PERSONAL STUDENT ASSISTANT</div><h1 id="pageTitle">Dashboard</h1></div>
+      <div class="system"><span class="pulse"></span> SYSTEM ONLINE</div>
+    </header>
+
+    <section class="view active" id="view-dashboard"></section>
+    <section class="view" id="view-tasks"></section>
+    <section class="view" id="view-subjects"></section>
+    <section class="view" id="view-timetable"></section>
+    <section class="view" id="view-expenses"></section>
+    <section class="view" id="view-notes"></section>
+    <section class="view" id="view-study"></section>
+    <section class="view" id="view-settings"></section>
+  </main>
+</div>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
