@@ -1,36 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#03080f"><meta name="description" content="Student JARVIS V2">
-<title>Student JARVIS V2</title>
-<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111d">
+  <meta name="description" content="Student JARVIS — a futuristic offline-first student dashboard.">
+  <title>Student JARVIS</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="scanlines"></div>
-<div class="shell">
-<aside id="sidebar">
-  <div class="brand"><div class="arc">◉</div><div><b>J.A.R.V.I.S.</b><small>STUDENT OS • V2</small></div></div>
-  <nav>
-    <button class="nav active" data-v="home">⌂ <span>Command Center</span></button>
-    <button class="nav" data-v="ai">◈ <span>AI Assistant</span></button>
-    <button class="nav" data-v="tasks">✓ <span>Tasks</span><em id="badge">0</em></button>
-    <button class="nav" data-v="study">◷ <span>Study Timer</span></button>
-    <button class="nav" data-v="tools">▦ <span>Student Tools</span></button>
-    <button class="nav" data-v="settings">⚙ <span>Settings</span></button>
-  </nav>
-  <footer>LOCAL DATA MODE<br><span>No camera • No microphone</span></footer>
-</aside>
-<main>
-<header><button id="hamb">☰</button><div><small>PERSONAL STUDENT ASSISTANT</small><h1 id="title">Command Center</h1></div><div class="online"><i></i> ONLINE</div></header>
-<section id="home" class="page active"></section>
-<section id="ai" class="page"></section>
-<section id="tasks" class="page"></section>
-<section id="study" class="page"></section>
-<section id="tools" class="page"></section>
-<section id="settings" class="page"></section>
-</main>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="brand-core">◉</span><div><strong>J.A.R.V.I.S.</strong><small>STUDENT OS</small></div></div>
+    <nav>
+      <button class="nav-btn active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+      <button class="nav-btn" data-view="tasks">✓ <span>Tasks</span><b id="taskBadge">0</b></button>
+      <button class="nav-btn" data-view="subjects">▣ <span>Subjects</span></button>
+      <button class="nav-btn" data-view="timetable">◫ <span>Timetable</span></button>
+      <button class="nav-btn" data-view="expenses">₹ <span>Expenses</span></button>
+      <button class="nav-btn" data-view="notes">✎ <span>Notes</span></button>
+      <button class="nav-btn" data-view="study">◷ <span>Study Timer</span></button>
+      <button class="nav-btn" data-view="settings">⚙ <span>Settings</span></button>
+    </nav>
+    <div class="sidebar-foot">LOCAL MODE<br><span>No camera • No microphone</span></div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="menu" id="menuBtn">☰</button>
+      <div><div class="eyebrow">PERSONAL STUDENT ASSISTANT</div><h1 id="pageTitle">Dashboard</h1></div>
+      <div class="system"><span class="pulse"></span> SYSTEM ONLINE</div>
+    </header>
+
+    <section class="view active" id="view-dashboard"></section>
+    <section class="view" id="view-tasks"></section>
+    <section class="view" id="view-subjects"></section>
+    <section class="view" id="view-timetable"></section>
+    <section class="view" id="view-expenses"></section>
+    <section class="view" id="view-notes"></section>
+    <section class="view" id="view-study"></section>
+    <section class="view" id="view-settings"></section>
+  </main>
 </div>
 <div id="toast"></div>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
